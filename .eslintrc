@@ -10,7 +10,6 @@
     }
   },
   "ignorePatterns": [
-    "**/*",
     "node_modules"
   ],
   "settings": {
@@ -30,5 +29,8 @@
   ],
   "plugins": [
     "nimbus-clean"
-  ]
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
