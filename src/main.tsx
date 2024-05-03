@@ -12,6 +12,9 @@ createRoot(document.querySelector("#root")!).render(
       theme={{
         token: {
           colorText: "#FFFFFF",
+          fontSizeHeading1: 60,
+          fontSizeHeading2: 40,
+          fontSizeHeading3: 30,
         },
       }}
     >

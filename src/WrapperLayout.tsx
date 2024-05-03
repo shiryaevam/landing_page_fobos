@@ -7,7 +7,8 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 
-import { FirstBlock } from "./FirstBlock/FirstBlock.tsx";
+import { AboutUs } from "./pages/AboutUs/AboutUs.tsx";
+import { FirstBlock } from "./pages/FirstBlock/FirstBlock.tsx";
 import { Wrapper, WrapperSider } from "./WrapperLayout.styled.ts";
 
 const items = [
@@ -45,14 +46,6 @@ export const WrapperLayout = () => {
         breakpoint="md"
         collapsedWidth="0"
         defaultCollapsed={defaultCollapsed}
-        style={{
-          bottom: 0,
-          height: "100vh",
-          left: 0,
-          overflow: "visible",
-          position: "fixed",
-          top: 0,
-        }}
       >
         <Menu
           theme="dark"
@@ -62,6 +55,7 @@ export const WrapperLayout = () => {
         />
       </WrapperSider>
       <FirstBlock />
+      <AboutUs />
     </Wrapper>
   );
 };
