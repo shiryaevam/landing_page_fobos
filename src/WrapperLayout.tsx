@@ -1,5 +1,5 @@
-import { createElement } from "react";
-import { Layout, Menu, theme } from "antd";
+import { createElement, useLayoutEffect, useState } from "react";
+import { Grid, Layout, Menu } from "antd";
 
 import {
   UploadOutlined,
@@ -7,7 +7,8 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 
-const { Content, Footer, Header, Sider } = Layout;
+import { FirstBlock } from "./FirstBlock/FirstBlock.tsx";
+import { Wrapper, WrapperSider } from "./WrapperLayout.styled.ts";
 
 const items = [
   UserOutlined,
@@ -20,49 +21,41 @@ const items = [
   label: `nav ${index + 1}`,
 }));
 
+const { useBreakpoint } = Grid;
+
 export const WrapperLayout = () => {
-  const {
-    token: { borderRadiusLG, colorBgContainer },
-  } = theme.useToken();
+  const breakpoints = useBreakpoint();
+
+  const [defaultCollapsed, setDefaultCollapsed] = useState(true);
+
+  useLayoutEffect(() => {
+    if (breakpoints) {
+      setDefaultCollapsed(
+        !Object.entries(breakpoints).reduce(
+          (accumulator, entries) => accumulator || entries[1],
+          false,
+        ),
+      );
+    }
+  }, [breakpoints]);
 
   return (
-    <Layout>
-      <Sider
-        breakpoint="lg"
-        collapsedWidth="0"
-        onBreakpoint={(broken) => {
-          console.log(broken);
-        }}
-        onCollapse={(collapsed, type) => {
-          console.log(collapsed, type);
-        }}
-      >
-        <div className="demo-logo-vertical" />
-        <Menu
-          theme="dark"
-          mode="inline"
-          defaultSelectedKeys={["4"]}
-          items={items}
-        />
-      </Sider>
+    <Wrapper>
       <Layout>
-        <Header style={{ background: colorBgContainer, padding: 0 }} />
-        <Content style={{ margin: "24px 16px 0" }}>
-          <div
-            style={{
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-              minHeight: 360,
-              padding: 24,
-            }}
-          >
-            content
-          </div>
-        </Content>
-        <Footer style={{ textAlign: "center" }}>
-          Ant Design ©{new Date().getFullYear()} Created by Ant UED
-        </Footer>
+        <WrapperSider
+          breakpoint="md"
+          collapsedWidth="0"
+          defaultCollapsed={defaultCollapsed}
+        >
+          <Menu
+            theme="dark"
+            mode="inline"
+            defaultSelectedKeys={["4"]}
+            items={items}
+          />
+        </WrapperSider>
+        <FirstBlock />
       </Layout>
-    </Layout>
+    </Wrapper>
   );
 };

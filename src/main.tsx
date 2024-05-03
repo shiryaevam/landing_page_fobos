@@ -11,12 +11,7 @@ createRoot(document.querySelector("#root")!).render(
     <ConfigProvider
       theme={{
         token: {
-          borderRadius: 2,
-          // Alias Token
-          colorBgContainer: "#1B1B1B",
-
-          // Seed Token
-          colorPrimary: "#00b96b",
+          colorText: "#FFFFFF",
         },
       }}
     >
