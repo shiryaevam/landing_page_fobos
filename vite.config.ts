@@ -8,16 +8,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     sourcemap: mode === "development",
   },
-  plugins: [
-    react({
-      babel: {
-        babelrc: false,
-        configFile: false,
-        plugins: ["styled-components"],
-      },
-      include: /\.(jsx|tsx)$/,
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: [
       {
