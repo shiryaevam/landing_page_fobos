@@ -3,14 +3,15 @@ import styled from "styled-components";
 
 const { Sider } = Layout;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(Layout)`
   min-height: 100dvh;
 `;
 
 export const WrapperSider = styled(Sider)`
-  height: 100vh;
-  overflow: visible;
+  display: block;
   position: fixed;
   z-index: 5;
-  top: 0;
+  left: 0;
+  top: 100px;
+  overflow: visible;
 `;

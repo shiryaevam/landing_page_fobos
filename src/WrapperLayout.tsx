@@ -1,5 +1,5 @@
 import { createElement, useLayoutEffect, useState } from "react";
-import { Grid, Layout, Menu } from "antd";
+import { Grid, Menu } from "antd";
 
 import {
   UploadOutlined,
@@ -40,22 +40,28 @@ export const WrapperLayout = () => {
   }, [breakpoints]);
 
   return (
-    <Wrapper>
-      <Layout>
-        <WrapperSider
-          breakpoint="md"
-          collapsedWidth="0"
-          defaultCollapsed={defaultCollapsed}
-        >
-          <Menu
-            theme="dark"
-            mode="inline"
-            defaultSelectedKeys={["4"]}
-            items={items}
-          />
-        </WrapperSider>
-        <FirstBlock />
-      </Layout>
+    <Wrapper hasSider={true}>
+      <WrapperSider
+        breakpoint="md"
+        collapsedWidth="0"
+        defaultCollapsed={defaultCollapsed}
+        style={{
+          bottom: 0,
+          height: "100vh",
+          left: 0,
+          overflow: "visible",
+          position: "fixed",
+          top: 0,
+        }}
+      >
+        <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={["4"]}
+          items={items}
+        />
+      </WrapperSider>
+      <FirstBlock />
     </Wrapper>
   );
 };
