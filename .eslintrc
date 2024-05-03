@@ -29,10 +29,12 @@
       },
       "alias": {
         "extensions": [ ".js", ".tsx", ".ts"],
-        "assets": [
+        "assets":
           [
             "@assets", "./src/assets"
-          ]
+          ],
+        "components": [
+          "@components", "./src/components"
         ]
       }
     }
