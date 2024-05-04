@@ -10,3 +10,6 @@ body {
     background-color: #1B1B1B;
 }
 
+.ant-divider {
+    border-block-start: 3px solid #FFFFFF;
+}

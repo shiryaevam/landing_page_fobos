@@ -9,6 +9,8 @@ import {
 
 import { AboutUs } from "./pages/AboutUs/AboutUs.tsx";
 import { FirstBlock } from "./pages/FirstBlock/FirstBlock.tsx";
+import { OurAdvantages } from "./pages/OurAdvantages/OurAdvantages.tsx";
+import { OurServices } from "./pages/OurServices/OurServices.tsx";
 import { Wrapper, WrapperSider } from "./WrapperLayout.styled.ts";
 
 const items = [
@@ -56,6 +58,8 @@ export const WrapperLayout = () => {
       </WrapperSider>
       <FirstBlock />
       <AboutUs />
+      <OurAdvantages />
+      <OurServices />
     </Wrapper>
   );
 };

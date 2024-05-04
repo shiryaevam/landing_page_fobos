@@ -5,7 +5,6 @@ const { Sider } = Layout;
 
 export const Wrapper = styled(Layout)`
   &&& {
-    display: flex;
     flex-direction: column;
     min-height: 100dvh;
   }
