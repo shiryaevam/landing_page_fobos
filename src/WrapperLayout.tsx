@@ -7,9 +7,10 @@ import {
   VideoCameraOutlined,
 } from "@ant-design/icons";
 
-import { AboutUs } from "./pages/AboutUs/AboutUs.tsx";
-import { FirstBlock } from "./pages/FirstBlock/FirstBlock.tsx";
-import { OurAdvantages } from "./pages/OurAdvantages/OurAdvantages.tsx";
+import { AboutUs } from "./pages/AboutUs";
+import { Employees } from "./pages/Employees/Employees.tsx";
+import { FirstBlock } from "./pages/FirstBlock";
+import { OurAdvantages } from "./pages/OurAdvantages";
 import { OurServices } from "./pages/OurServices/OurServices.tsx";
 import { Wrapper, WrapperSider } from "./WrapperLayout.styled.ts";
 
@@ -60,6 +61,7 @@ export const WrapperLayout = () => {
       <AboutUs />
       <OurAdvantages />
       <OurServices />
+      <Employees />
     </Wrapper>
   );
 };

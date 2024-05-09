@@ -28,7 +28,7 @@ export const OurServices = () => (
         <TextService level={3}>СБОР</TextService>
       </Services>
       <Services>
-        <TextService gray level={3}>
+        <TextService $gray={true} level={3}>
           ОБРАБОТКА
         </TextService>
       </Services>
@@ -36,7 +36,7 @@ export const OurServices = () => (
         <TextService level={3}>ТРАНСПОРТИРОВАНИЕ</TextService>
       </Services>
       <Services>
-        <TextService gray level={3}>
+        <TextService $gray={true} level={3}>
           ОБЕЗВРЕЖИВАНИЕ
         </TextService>
       </Services>

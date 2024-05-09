@@ -26,7 +26,7 @@ export const OurAdvantages = () => {
           srcSet={`${imageJPG} 200w, ${imagePng}  700w `}
           alt="MDN"
           sizes={`(max-width: ${token.screenMD}px) 1600px,
-         1500x, (min-width: ${token.screenXS}px) 100%,
+         1500x, (min-width: ${token.screenXS}px) 50vh,
          50vh`}
           height="100%"
           width="100%"

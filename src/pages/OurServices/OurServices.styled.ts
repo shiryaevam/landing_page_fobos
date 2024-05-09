@@ -16,9 +16,9 @@ export const Services = styled.li`
   }
 `;
 
-export const TextService = styled(TitleShadow)<{ gray?: boolean }>`
+export const TextService = styled(TitleShadow)<{ $gray?: boolean }>`
   &&& {
     margin: 0;
-    color: ${({ gray }) => (gray ? "#ffffff99" : "white")};
+    color: ${({ $gray }) => ($gray ? "#ffffff99" : "white")};
   }
 `;
